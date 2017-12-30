@@ -7,6 +7,20 @@
     </url>
     
     <url>
+        <loc>http://ShenyfZero9211.github.io/about/</loc>
+        <lastmod>2017-12-30T13:18:04.577Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://ShenyfZero9211.github.io/README.html</loc>
+        <lastmod>2017-12-30T09:10:12.480Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://ShenyfZero9211.github.io/tags/</loc>
         <lastmod>2017-12-30T08:36:05.201Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -16,13 +30,6 @@
     <url>
         <loc>http://ShenyfZero9211.github.io/archive/</loc>
         <lastmod>2017-12-30T08:36:05.107Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://ShenyfZero9211.github.io/about/</loc>
-        <lastmod>2017-12-30T08:36:05.105Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
