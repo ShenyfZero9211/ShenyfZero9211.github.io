@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          My First Truely Personal WebSite - SharpEye | Hope
+          Processing 高效控制管理图形方法(一) - SharpEye | Hope
         
     </title>
 
-    <link rel="canonical" href="http://ShenyfZero9211.github.io/2017/12/30/My-Fist-True-Personal-WebSite/">
+    <link rel="canonical" href="http://ShenyfZero9211.github.io/2018/01/03/Processing-高效控制管理图形方法-一/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('Demo.jpg')
+            background-image: url('header1.jpg')
             /*post*/
         
     }
@@ -90,14 +90,14 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Others" title="Others">Others</a>
+                              <a class="tag" href="/tags/#Processing" title="Processing">Processing</a>
                             
                         </div>
-                        <h1>My First Truely Personal WebSite</h1>
-                        <h2 class="subheading">Hope ... ...</h2>
+                        <h1>Processing 高效控制管理图形方法(一)</h1>
+                        <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Shen Yifan on
-                            2017-12-30
+                            2018-01-03
                         </span>
                     </div>
                 
@@ -218,17 +218,38 @@
                 post-container">
 
                 <blockquote>
-<p>Ported Theme of <a href="https://github.com/Huxpro/huxpro.github.io" target="_blank" rel="noopener">Hux Blog</a>, Thank <a href="https://github.com/Huxpro" target="_blank" rel="noopener">Huxpro</a> for designing such a flawless theme.</p>
-<p>This BeanTech theme created by <a href="http://beantech.org" target="_blank" rel="noopener">YuHsuan</a> modified from the original Porter <a href="http://kaijun.rocks/hexo-theme-huxblog/" target="_blank" rel="noopener">Kaijun</a></p>
-<p>Thanks to those people’s work !</p>
+<p>CSDN博客站点·同文地址: <a href="http://blog.csdn.net/fddxsyf123/article/details/62456299" target="_blank" rel="noopener">http://blog.csdn.net/fddxsyf123/article/details/62456299</a></p>
 </blockquote>
-<h1><span id="hope">HOPE</span></h1>
-<hr>
-<p>This is My First Truely Personal WebSite in my life !<br>
-这是我人生中真正意义上的个人网站【技术博客】！<br>
-[Awesome]</p>
-<p>今后会不断更新一些博文，有关创意编程、游戏引擎、交互艺术、软件技术等内容，希望大家喜欢并支持。</p>
-<p><a class="github-button" href="https://github.com/ShenyfZero9211" aria-label="Follow @ShenyfZero9211 on GitHub" target="_blank" rel="noopener">Follow</a> if you like me !</p>
+<p>介绍一下Processing控制图形的类游戏物件（gameobject的transform节点）的方法。【借Unity里的Transform component的概念进行类比学习】</p>
+<p>大家熟悉Unity游戏引擎控制gameobject的transform节点，有三大属性可被控制，如图：<br>
+<img src="0.png" width="400" height="0"></p>
+<p>分别是Position,Rotation和Scale。（位置（偏移量），旋转值和缩放值）</p>
+<p>有这样的component控制object就很得心印手。那倘若processing里也能有这样的节点控制该有多好！不要急，就给您讲~           使用Processing里的translate(),rotate(),scale()函数就可以模拟上述的控制效果。我们可以从官方的文档里查看介绍。<br>
+<a href="https://processing.org/reference/translate_.html" target="_blank" rel="noopener">https://processing.org/reference/translate_.html</a> —translate()<br>
+<a href="https://processing.org/reference/rotate_.html" target="_blank" rel="noopener">https://processing.org/reference/rotate_.html</a> —rotate()<br>
+<a href="https://processing.org/reference/scale_.html" target="_blank" rel="noopener">https://processing.org/reference/scale_.html</a> —scale()</p>
+<p>打开Processing IDE ,比如想绘画一个矩形，置于画布（100,50）位置上，其他属性不变，键入如下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">translate(<span class="number">100</span>,<span class="number">50</span>);  </span><br><span class="line">rotate(<span class="number">0</span>);  </span><br><span class="line">scale(<span class="number">1</span>);  </span><br><span class="line">rect(<span class="number">0</span>,<span class="number">0</span>,<span class="number">200</span>,<span class="number">150</span>);</span><br></pre></td></tr></table></figure>
+<p>注意rect()函数的参数填写。第一，第二个参数用来控制矩形绘制的起始点，这个例子里用了(0,0)点作为起始点，那为何画出来的效果是我们要的？答案就在translate()函数。这个函数可以重新定义所有绘画的起始点，也就是绘画的偏移量。假如再画一个方框，rect(50,50,100,100),那这个方框的起始点其实是在(150,100)点上，把translate()的偏移量叠加。<br>
+定义(0,0)点作为起始点再加上偏移量就可得到最终的(100,50)的位置。不用旋转，所以rotate()函数参数写0(括号里面因填写弧度制的值，因此用角度值开控制要加上radians(deg)函数)。缩放值也不用修改，1作为缩放量，即原有的大小。</p>
+<p>如图：<br>
+<img src="1.png" width="400" height="0"></p>
+<p>如果再绘画第二个方框,位置设在(50,300)，键入</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">translate(<span class="number">50</span>,<span class="number">300</span>);  </span><br><span class="line">rotate(<span class="number">0</span>);  </span><br><span class="line">scale(<span class="number">1</span>);  </span><br><span class="line">rect(<span class="number">0</span>,<span class="number">0</span>,<span class="number">200</span>,<span class="number">150</span>);</span><br></pre></td></tr></table></figure>
+<p>得到如图效果：<br>
+<img src="2.png" width="400" height="0"></p>
+<p>发现并不是理想的效果。原因在于translate偏移量会累加，绘画的总体起始点实际上从(0,0)变化到了(150,350)。从而画出的第二个方框的起始点实在(150,350)上。那如何处理呢？<br>
+可以在每次变化偏移量时，给一对出入堆栈的函数：pushMatrix() 和 popMatrix()。这一套函数可以使偏移的量或是其他量，相对独立开来，不影响上下的值大小，具体原理此处不去阐述。<br>
+So,我们在画每一个图形时加上这一对函数，即：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">pushMatrix();  </span><br><span class="line">translate(<span class="number">100</span>, <span class="number">50</span>);  </span><br><span class="line">rotate(<span class="number">0</span>);  </span><br><span class="line">scale(<span class="number">1</span>);  </span><br><span class="line">rect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">200</span>, <span class="number">150</span>);  </span><br><span class="line">popMatrix();  </span><br><span class="line">  </span><br><span class="line">pushMatrix();  </span><br><span class="line">translate(<span class="number">50</span>, <span class="number">300</span>);  </span><br><span class="line">rotate(<span class="number">0</span>);  </span><br><span class="line">scale(<span class="number">1</span>);  </span><br><span class="line">rect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">200</span>, <span class="number">150</span>);  </span><br><span class="line">popMatrix();</span><br></pre></td></tr></table></figure>
+<p>得：<br>
+<img src="3.png" width="400" height="0"></p>
+<p>再如添加一个圆，放在中心，就可以这样编写：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pushMatrix();  </span><br><span class="line">translate(width/<span class="number">2</span>, height/<span class="number">2</span>);  </span><br><span class="line">rotate(<span class="number">0</span>);  </span><br><span class="line">scale(<span class="number">1</span>);  </span><br><span class="line">ellipse(<span class="number">0</span>, <span class="number">0</span>, <span class="number">150</span>, <span class="number">150</span>);  </span><br><span class="line">popMatrix();</span><br></pre></td></tr></table></figure>
+<p>得到如图效果:<br>
+<img src="4.png" width="400" height="0"></p>
+<p>如果我们想在此基础上上图形产生偏移，就可在原本绘画函数参数里面进行变动，如rect()里定义的起始点，可以改成非(0,0)。但是不建议这样做。更有效控制的方法应该是再加入translate()命令来间接控制，比较妥当，便于往后繁多图形的控制。读者可以试修改rotate()和scale()里的参数看看效果如何。这样就可以模拟Unity里控制object的效果了。</p>
+<p>下节补充介绍使用这种方法控制的益处和小案例。</p>
 
                 
 
@@ -237,9 +258,13 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2018/01/03/交互平台-Processing-开发模板-仿Openframeworks/" data-toggle="tooltip" data-placement="top" title="交互平台 - Processing - 开发模板(仿Openframeworks)">&larr; Previous Post</a>
+                            <a href="/2018/01/03/Processing-高效控制管理图形方法-二/" data-toggle="tooltip" data-placement="top" title="Processing 高效控制管理图形方法(二)">&larr; Previous Post</a>
                         </li>
                     
+                    
+                        <li class="next">
+                            <a href="/2018/01/03/交互平台-Processing-开发模板-仿Openframeworks/" data-toggle="tooltip" data-placement="top" title="交互平台 - Processing - 开发模板(仿Openframeworks)">Next Post &rarr;</a>
+                        </li>
                     
                 </ul>
 
@@ -268,7 +293,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">HOPE</span></a></li></ol>
+          <ol class="nav">none</ol>
         
         </div>
       </aside>
@@ -288,7 +313,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#Others" title="Others">Others</a>
+                          <a class="tag" href="/tags/#Processing" title="Processing">Processing</a>
                         
                     </div>
                 </section>
@@ -321,8 +346,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "your-disqus-ID";
-    var disqus_identifier = "http://ShenyfZero9211.github.io/2017/12/30/My-Fist-True-Personal-WebSite/";
-    var disqus_url = "http://ShenyfZero9211.github.io/2017/12/30/My-Fist-True-Personal-WebSite/";
+    var disqus_identifier = "http://ShenyfZero9211.github.io/2018/01/03/Processing-高效控制管理图形方法-一/";
+    var disqus_url = "http://ShenyfZero9211.github.io/2018/01/03/Processing-高效控制管理图形方法-一/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
