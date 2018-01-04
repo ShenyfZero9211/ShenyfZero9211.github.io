@@ -143,13 +143,6 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -158,6 +151,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -207,14 +207,40 @@
             <!-- 标签云 -->
             <div id='tag_cloud' class="tags">
                 
-                    <a href="#Processing" title="Processing" rel="4">Processing</a>
-                
                     <a href="#Others" title="Others" rel="1">Others</a>
+                
+                    <a href="#Processing" title="Processing" rel="4">Processing</a>
                 
             </div>
 
             <!-- 标签列表 -->
 
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="Others">
+                    <span class="tag-text">Others</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2017/12/30/My-Fist-True-Personal-WebSite/">
+                        <h2 class="post-title">
+                            My First Truely Personal WebSite
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                Hope ... ...
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
             
             <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="Processing">
@@ -226,9 +252,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2018/01/03/Processing-状态量控制动画技巧/">
+                     <a href="/2018/01/03/Processing-高效控制管理图形方法-一/">
                         <h2 class="post-title">
-                            Processing 状态量控制动画技巧
+                            Processing 高效控制管理图形方法(一)
                         </h2>
                         
                     </a>
@@ -241,9 +267,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/2018/01/03/Processing-高效控制管理图形方法-一/">
+                     <a href="/2018/01/03/Processing-状态量控制动画技巧/">
                         <h2 class="post-title">
-                            Processing 高效控制管理图形方法(一)
+                            Processing 状态量控制动画技巧
                         </h2>
                         
                     </a>
@@ -275,32 +301,6 @@
                         <h2 class="post-title">
                             交互平台 - Processing - 开发模板(仿Openframeworks)
                         </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Others">
-                    <span class="tag-text">Others</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2017/12/30/My-Fist-True-Personal-WebSite/">
-                        <h2 class="post-title">
-                            My First Truely Personal WebSite
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                Hope ... ...
-                            </h3>
                         
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -457,14 +457,15 @@
  
 
 
-
 <div>
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-本站总访问量 <span id="busuanzi_value_site_pv"></span> 次&nbsp&nbsp&nbsp
-本站访客数<span id="busuanzi_value_site_uv"></span>人次
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次&nbsp&nbsp&nbsp
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+    <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
 </div>
-
 
 
 
