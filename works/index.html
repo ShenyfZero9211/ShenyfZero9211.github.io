@@ -218,8 +218,40 @@
         var player = new skPlayer({
             autoplay: true,
             music: {
-                type: 'cloud',
-                source: 317921676
+                type: 'file',
+                source: [
+        //必需项,音乐文件数组
+            {
+				name: 'August Night',
+                //必需项,歌名
+                author: 'Martian',
+                //必需项,歌手
+                src: 'http://music.163.com/song/media/outer/url?id=17272601.mp3',
+                //必需项,音乐文件
+                cover: 'http://p3.music.126.net/U-TeMvQxa6DMLok6ZVCj1Q==/2538772349618639.jpg'
+                //必需项,封面图片
+            },
+			{
+				name: 'Soul to Soul',
+                //必需项,歌名
+                author: 'Martian',
+                //必需项,歌手
+                src: 'http://music.163.com/song/media/outer/url?id=40157214.mp3',
+                //必需项,音乐文件
+                cover: 'http://p1.music.126.net/tqzPuKNJrzBRXxuB_e0XYA==/3294136843677660.jpg'
+                //必需项,封面图片
+            },  
+			{
+                name: 'Inspire',
+                //必需项,歌名
+                author: 'Capo Productions',
+                //必需项,歌手
+                src: 'http://music.163.com/song/media/outer/url?id=4010812.mp3',
+                //必需项,音乐文件
+                cover: 'http://p1.music.126.net/InlptK7PbIvLsvWle_V2YQ==/3306231467710538.jpg'
+                //必需项,封面图片
+            }
+        ]
             }
         });
     </script>
