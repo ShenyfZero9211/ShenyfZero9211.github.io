@@ -4,6 +4,13 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+
+				#skPlayer{
+					margin:27px auto 0;
+				}
+	
+			</style>
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<meta name="description" content="">
 		<meta name="author" content="">
@@ -203,7 +210,21 @@
 		</section>
 
 
-		<div>
+
+		<div id="skPlayer" ></div>
+		
+		<script src="./dist/skPlayer.min.js"></script>
+    <script>
+        var player = new skPlayer({
+            autoplay: true,
+            music: {
+                type: 'cloud',
+                source: 997829276
+            }
+        });
+    </script>
+		
+		<div style="margin-top:200px">
 			<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 			
 			本站总访问量 <span id="busuanzi_value_site_pv"></span> 次&nbsp&nbsp&nbsp
